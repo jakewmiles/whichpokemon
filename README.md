@@ -1,6 +1,16 @@
 # Whichpokemon
 
-To start your Phoenix server:
+### Whichpokemon is a small app made with Phoenix/Phoenix LiveView.
+
+---
+
+#### Motives to build the app:
+- Get more familiar with Elixir/Phoenix
+- Practice using new Hex packages (HTTPoison, SurfaceUI)
+
+---
+
+To start the app:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
