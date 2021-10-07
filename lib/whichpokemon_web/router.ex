@@ -18,6 +18,7 @@ defmodule WhichpokemonWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/game/:gen", GameLive, :index
   end
 
   # Other scopes may use custom stacks.
