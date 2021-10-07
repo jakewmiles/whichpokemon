@@ -47,13 +47,14 @@ defmodule WhichpokemonWeb.PageLive do
   def render(assigns) do
     ~F"""
       <h1>Score: {@score}</h1>
-      {#for [string_name] = name <- @list_choices}
+      {#for name <- @list_choices}
         <button phx-value-id={name} phx-click="guess">{name}</button>
       {/for}
       <img src={@front_default} />
     """
   end
 
+  @impl true
   def handle_event("guess", params, socket) do
     %{"id" => guess} = params
     new_game = get_assigns(socket.assigns.leftovers)
