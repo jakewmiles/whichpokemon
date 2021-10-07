@@ -60,11 +60,18 @@ defmodule WhichpokemonWeb.GameLive do
   @impl true
   def render(assigns) do
     ~F"""
-      <h1>Score: {@score}</h1>
-      {#for name <- @list_choices}
-        <button phx-value-id={name} phx-click="guess">{name}</button>
-      {/for}
-      <img src={@front_default} />
+      <div class="game-container">
+        <h1>Score: {@score}</h1>
+        {#for name <- @list_choices}
+          <button phx-value-id={name} phx-click="guess">{name}</button>
+        {/for}
+        <div class="image-container">
+          <img src={@front_default} />
+        </div>
+        
+        <button phx-click="home">Go back!</button>
+        
+      </div>
     """
   end
 
@@ -91,6 +98,11 @@ defmodule WhichpokemonWeb.GameLive do
           |> assign(leftovers: new_game.leftovers)
         }
     end
+  end
+
+  @impl true
+  def handle_event("home", _params, socket) do
+    {:noreply, push_redirect(socket, to: "/")}
   end
 
 end
