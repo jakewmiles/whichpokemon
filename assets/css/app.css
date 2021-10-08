@@ -6,22 +6,28 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+h1 {
+  font-size: 48px;
+  margin: 10px;
+}
+
 button {
   text-transform: capitalize;
-  width: 175px;
-  height: 50px;
+  width: 144px;
+  height: 48px;
   border-radius: 50px;
-  margin: 10px;
+  margin: 12px;
   background-color: transparent;
   box-shadow: 5px 5px 10px black;
 }
 
 button:hover {
-  width: 175px;
-  height: 50px;
+  cursor: pointer;
+  width: 144px;
+  height: 48px;
   border-radius: 50px;
-  margin: 10px;
+  margin: 12px;
   background-color: black;
   color: white;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 5px 5px 15px black;
 }
